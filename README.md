@@ -1,2 +1,3 @@
 # bryit
-bryit of rex
+
+Bryit Builders Corp.
