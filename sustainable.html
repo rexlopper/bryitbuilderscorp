@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Construction | Bryit Builders Corporation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #1A0508; }
+        .font-serif { font-family: 'Cinzel', serif; }
+        .text-gold { color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        .border-gold { border-color: #D4AF37; }
+    </style>
+</head>
+<body class="text-slate-300 antialiased">
+
+    <nav class="fixed w-full z-50 py-8 px-10 flex justify-between items-center bg-[#1A0508]/95 backdrop-blur-lg border-b border-white/5">
+        <a href="index.html" class="block w-[250px] md:w-[280px]">
+            <img src="assets/images/bryit-builders-logo.svg" alt="Bryit Builders Corporation" class="w-full h-auto max-h-[118px] object-contain">
+        </a>
+        <div class="hidden md:flex items-center space-x-10 text-[10px] uppercase tracking-[0.4em] font-semibold">
+            <a href="index.html" class="hover:text-gold transition">Home</a>
+            <div class="relative group/services">
+                <button class="flex items-center gap-1.5 uppercase text-gold">
+                    Services
+                    <svg class="w-3 h-3 transition-transform duration-300 group-hover/services:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="absolute top-full left-0 pt-3 hidden group-hover/services:block z-50">
+                    <div class="bg-[#1A0508] border border-white/10 min-w-[210px]">
+                        <a href="design-build.html" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition">Design &amp; Build</a>
+                        <a href="renovation.html" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition border-t border-white/5">Renovation</a>
+                        <a href="sustainable.html" class="block px-6 py-3.5 text-gold hover:bg-[#2D0B12] transition border-t border-white/5">Sustainable Construction</a>
+                    </div>
+                </div>
+            </div>
+            <a href="portfolio.html" class="hover:text-gold transition">Registry</a>
+            <a href="about.html" class="hover:text-gold transition">The Firm</a>
+            <a href="contact.html" class="bg-gold text-black px-6 py-2 ml-4 hover:bg-white transition duration-300">Inquiry</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-screen flex items-end overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Modern tropical architecture with greenery" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1A0508] via-[#1A0508]/50 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-10 w-full pb-24">
+            <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">Biophilic & Solar-Ready Design</h4>
+            <h1 class="text-6xl md:text-8xl font-serif text-white leading-tight mb-6">
+                Build for<br><span class="italic text-gold">Tomorrow.</span>
+            </h1>
+            <p class="text-gray-300 text-lg max-w-xl leading-relaxed">
+                We combine tropical interior design with plants, daylight, and solar energy planning so homes and commercial spaces in the Philippines feel healthier and cost less to operate.
+            </p>
+        </div>
+    </header>
+
+    <!-- Why It Matters in PH -->
+    <section class="py-24 bg-[#1A0508]">
+        <div class="max-w-7xl mx-auto px-10 grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">The Philippine Context</h4>
+                <h2 class="text-4xl font-serif text-white mb-6 leading-tight">Sun, Heat, Plants,<br>and Rising Power Costs.</h2>
+                <div class="w-16 h-px bg-gold mb-8"></div>
+                <p class="text-gray-400 leading-loose mb-6">
+                    Sustainable construction in the Philippines is not only about certifications. It is about making spaces cooler, brighter, and more efficient in a hot, humid setting where electricity costs are high and air-conditioning loads can dominate the monthly bill.
+                </p>
+                <p class="text-gray-400 leading-loose mb-6">
+                    Plant-forward interiors help soften hard commercial spaces, improve atmosphere, and support a more premium customer experience. Solar integration adds another layer of practicality by turning the country's strong sun exposure into long-term savings.
+                </p>
+                <p class="text-gray-400 leading-loose">
+                    We treat sustainability as a design language and an engineering strategy at the same time, balancing visual warmth, tropical resilience, and measurable energy performance.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="p-8 border border-white/5 bg-[#2D0B12] hover:border-gold/40 transition">
+                    <span class="text-4xl font-serif text-white block mb-2">5.1</span>
+                    <span class="text-[10px] uppercase tracking-widest text-gold font-bold block mb-2">Peak Sun Hours / Day</span>
+                    <p class="text-gray-600 text-xs">A strong baseline for rooftop solar planning across much of the Philippine archipelago.</p>
+                </div>
+                <div class="p-8 border border-white/5 bg-[#2D0B12] hover:border-gold/40 transition">
+                    <span class="text-4xl font-serif text-white block mb-2">₱10+</span>
+                    <span class="text-[10px] uppercase tracking-widest text-gold font-bold block mb-2">Per kWh (MERALCO)</span>
+                    <p class="text-gray-600 text-xs">High utility rates make energy-efficient planning and solar payback more attractive.</p>
+                </div>
+                <div class="p-8 border border-white/5 bg-[#2D0B12] hover:border-gold/40 transition">
+                    <span class="text-4xl font-serif text-white block mb-2">RA</span>
+                    <span class="text-[10px] uppercase tracking-widest text-gold font-bold block mb-2">9513 - RE Act</span>
+                    <p class="text-gray-600 text-xs">Net metering support gives properly documented solar systems stronger long-term value.</p>
+                </div>
+                <div class="p-8 border border-white/5 bg-[#2D0B12] hover:border-gold/40 transition">
+                    <span class="text-4xl font-serif text-white block mb-2">20+</span>
+                    <span class="text-[10px] uppercase tracking-widest text-gold font-bold block mb-2">Typhoons Per Year</span>
+                    <p class="text-gray-600 text-xs">Tropical resilience matters, which is why passive cooling and durable detailing stay part of the plan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-24 bg-[#220A0F]">
+        <div class="max-w-7xl mx-auto px-10">
+            <div class="mb-16 text-center">
+                <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">What We Offer</h4>
+                <h2 class="text-4xl font-serif text-white">Plant-Forward, Solar-Smart Spaces</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-px bg-white/5">
+                <div class="bg-[#220A0F] p-10 hover:bg-[#2D0B12] transition duration-500">
+                    <div class="w-12 h-12 border border-gold/40 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    </div>
+                    <h3 class="text-white font-serif text-lg uppercase tracking-wider mb-3">Solar PV Systems</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Rooftop solar strategies for homes, offices, restaurants, and mixed-use properties that want to offset daytime loads and prepare for long-term energy savings.</p>
+                    <ul class="space-y-2 text-xs text-gray-500">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></span>Rooftop solar design & installation</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></span>Battery storage systems</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></span>Net metering application (RA 9513)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></span>Solar carport & ground-mount systems</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#220A0F] p-10 hover:bg-[#2D0B12] transition duration-500">
+                    <div class="w-12 h-12 border border-gold/40 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+                    </div>
+                    <h3 class="text-white font-serif text-lg uppercase tracking-wider mb-3">Biophilic Interior Design</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Interior concepts that combine indoor planting, better daylight, natural textures, and calmer layouts so commercial and residential spaces feel healthier and more premium.</p>
+                    <ul class="space-y-2 text-xs text-gray-500">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></span>Indoor planting and planter integration</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></span>Natural material palettes and warm finishes</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></span>Daylighting and low-glare lighting plans</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></span>Tropical layout planning for airflow and comfort</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#220A0F] p-10 hover:bg-[#2D0B12] transition duration-500">
+                    <div class="w-12 h-12 border border-gold/40 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                    </div>
+                    <h3 class="text-white font-serif text-lg uppercase tracking-wider mb-3">Passive Cooling & Resource Planning</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Design moves that help Philippine buildings stay cooler and operate more efficiently before expensive systems do all the work.</p>
+                    <ul class="space-y-2 text-xs text-gray-500">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></span>Shading, ventilation, and heat-gain reduction</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></span>Material choices suited for humid tropical conditions</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></span>Rainwater and site drainage planning where applicable</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0"></span>BERDE-ready sustainability direction for future certification</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solar Process -->
+    <section class="py-24 bg-[#1A0508]">
+        <div class="max-w-7xl mx-auto px-10">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                <img src="https://images.unsplash.com/photo-1745187946672-2c1d8cf26a2b?auto=format&fit=crop&w=1400&q=80" alt="Rooftop solar installation" class="w-full h-[500px] object-cover rounded-sm shadow-2xl">
+                <div class="absolute -bottom-6 -right-6 w-28 h-28 border-b-2 border-r-2 border-gold hidden md:block"></div>
+            </div>
+            <div>
+                <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">Solar Installation</h4>
+                <h2 class="text-4xl font-serif text-white mb-6 leading-snug">From Roof Study<br>to Energy Savings.</h2>
+                    <div class="w-16 h-px bg-gold mb-8"></div>
+                    <p class="text-gray-400 leading-loose mb-8">
+                        In the Philippines, a useful solar installation starts with proper roof evaluation, energy usage review, and documentation. We make sure the system is matched to the property instead of oversold, then help clients move toward interconnection and long-term value.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-4 p-4 border border-white/5 hover:border-gold/30 transition">
+                            <span class="text-gold font-serif font-bold text-lg opacity-50 w-8 flex-shrink-0">01</span>
+                            <div>
+                                <h4 class="text-white text-xs font-semibold uppercase tracking-widest">Shadow & Load Analysis</h4>
+                                <p class="text-gray-600 text-xs mt-0.5">Site visit, roof assessment, and energy consumption review to size your system correctly.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 border border-white/5 hover:border-gold/30 transition">
+                            <span class="text-gold font-serif font-bold text-lg opacity-50 w-8 flex-shrink-0">02</span>
+                            <div>
+                                <h4 class="text-white text-xs font-semibold uppercase tracking-widest">System Design & DOE Permit</h4>
+                                <p class="text-gray-600 text-xs mt-0.5">Electrical design by a PRC-licensed electrical engineer, DOE permit filing, and utility coordination.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 border border-white/5 hover:border-gold/30 transition">
+                            <span class="text-gold font-serif font-bold text-lg opacity-50 w-8 flex-shrink-0">03</span>
+                            <div>
+                                <h4 class="text-white text-xs font-semibold uppercase tracking-widest">Installation & Commissioning</h4>
+                                <p class="text-gray-600 text-xs mt-0.5">Panel mounting, inverter installation, wiring, and full system testing before grid connection.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 border border-white/5 hover:border-gold/30 transition">
+                            <span class="text-gold font-serif font-bold text-lg opacity-50 w-8 flex-shrink-0">04</span>
+                            <div>
+                                <h4 class="text-white text-xs font-semibold uppercase tracking-widest">Net Metering Application</h4>
+                                <p class="text-gray-600 text-xs mt-0.5">We file your net metering application with MERALCO or your distribution utility under RA 9513 — so your excess generation earns, not wastes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BERDE & Certification -->
+    <section class="py-24 bg-[#220A0F]">
+        <div class="max-w-7xl mx-auto px-10 grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">Green Certification</h4>
+                <h2 class="text-4xl font-serif text-white mb-6 leading-tight">BERDE & LEED<br>Certification Support.</h2>
+                <div class="w-16 h-px bg-gold mb-8"></div>
+                <p class="text-gray-400 leading-loose mb-6">
+                    BERDE (Building for Ecologically Responsive Design Excellence) is the Philippine Green Building Rating System administered by the Philippine Green Building Council. For international-standard projects, we also support LEED certification documentation.
+                </p>
+                <p class="text-gray-400 leading-loose mb-8">
+                    Green-certified buildings in the Philippines command higher rental premiums, attract quality tenants, and demonstrate corporate social responsibility — making certification a commercial as well as environmental decision.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <span class="text-gold mt-0.5">✦</span>
+                        <div>
+                            <h4 class="text-white text-sm font-semibold uppercase tracking-widest mb-1">BERDE Documentation & Scorecard</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">We prepare and submit all BERDE technical documentation for new buildings and major renovations seeking green certification.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="text-gold mt-0.5">✦</span>
+                        <div>
+                            <h4 class="text-white text-sm font-semibold uppercase tracking-widest mb-1">Energy Modeling & Analysis</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Simulation of building energy performance to identify optimization opportunities before construction begins.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="text-gold mt-0.5">✦</span>
+                        <div>
+                            <h4 class="text-white text-sm font-semibold uppercase tracking-widest mb-1">Sustainable Materials Sourcing</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Locally sourced, low-carbon, and responsibly manufactured construction materials that contribute to certification points and reduce embodied carbon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1400&q=80" alt="Green Building" class="w-full h-[500px] object-cover rounded-sm shadow-2xl">
+                <div class="absolute -top-6 -left-6 w-28 h-28 border-t-2 border-l-2 border-gold hidden md:block"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gold text-black text-center">
+        <h2 class="text-3xl font-serif font-bold mb-4 uppercase tracking-tighter">Start Building Responsibly.</h2>
+        <p class="text-black/60 mb-8 text-sm max-w-xl mx-auto">Lower your energy bills, qualify for green certification, and build a structure that reflects what matters to you.</p>
+        <a href="contact.html" class="border-2 border-black px-12 py-4 font-bold uppercase text-xs tracking-[0.3em] hover:bg-black hover:text-white transition">Get a Free Assessment</a>
+    </section>
+
+    <footer class="py-12 bg-[#0D0305] text-center">
+        <p class="text-[10px] uppercase tracking-[0.5em] text-gray-600">&copy; 2026 Bryit Builders Corp.</p>
+    </footer>
+
+</body>
+</html>

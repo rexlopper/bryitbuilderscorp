@@ -7,148 +7,318 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0F1115; }
+        body { font-family: 'Inter', sans-serif; background-color: #1A0508; }
         .font-serif { font-family: 'Cinzel', serif; }
         .text-gold { color: #D4AF37; }
         .bg-gold { background-color: #D4AF37; }
         .border-gold { border-color: #D4AF37; }
-        .input-field:focus { border-color: #D4AF37; box-shadow: 0 0 15px rgba(212, 175, 55, 0.1); }
+        .text-ivory { color: #F2E7DB; }
+        .text-soft { color: #D8C4B5; }
+        .input-field { background-color: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.10); padding: 0.95rem 1rem; color: #E8D8CB; transition: all 0.3s ease; }
+        .input-field:focus { border-color: #D4AF37; box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.18); outline: none; }
+        .input-field::placeholder { color: rgba(216,196,181,0.46); }
+        select.input-field option { color: #111111; }
     </style>
 </head>
 <body class="text-slate-300 antialiased">
 
-    <nav class="fixed w-full z-50 py-6 px-10 flex justify-between items-center bg-[#0F1115]/95 backdrop-blur-lg border-b border-white/5">
-        <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-white uppercase">
-            BRYIT <span class="text-gold">BUILDERS</span>
+    <nav class="fixed w-full z-50 py-8 px-10 flex justify-between items-center bg-[#1A0508]/95 backdrop-blur-lg border-b border-white/5">
+        <a href="index.html" class="block w-[250px] md:w-[280px]">
+            <img src="assets/images/bryit-builders-logo.svg" alt="Bryit Builders Corporation" class="w-full h-auto max-h-[118px] object-contain">
         </a>
         <div class="hidden md:flex items-center space-x-10 text-[10px] uppercase tracking-[0.4em] font-semibold">
             <a href="index.html" class="hover:text-gold transition">Home</a>
-            <a href="services.html" class="hover:text-gold transition">Capabilities</a>
+            <div class="relative group/services">
+                <button class="flex items-center gap-1.5 uppercase hover:text-gold transition">
+                    Services
+                    <svg class="w-3 h-3 transition-transform duration-300 group-hover/services:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="absolute top-full left-0 pt-3 hidden group-hover/services:block z-50">
+                    <div class="bg-[#1A0508] border border-white/10 min-w-[210px]">
+                        <a href="design-build.html" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition">Design &amp; Build</a>
+                        <a href="renovation.html" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition border-t border-white/5">Renovation</a>
+                        <a href="sustainable.html" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition border-t border-white/5">Sustainable Construction</a>
+                    </div>
+                </div>
+            </div>
             <a href="portfolio.html" class="hover:text-gold transition">Registry</a>
             <a href="about.html" class="hover:text-gold transition">The Firm</a>
             <a href="contact.html" class="text-gold border-b border-gold pb-1">Inquiry</a>
         </div>
     </nav>
 
-    <div class="pt-32 min-h-screen flex flex-col md:flex-row">
-        
-        <div class="w-full md:w-1/2 bg-[#0F1115] p-10 md:p-20 flex flex-col justify-center border-r border-white/5">
-            <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">Start a Project</h4>
-            <h1 class="text-5xl font-serif text-white mb-8">Engineering <br>Your Vision.</h1>
-            <p class="text-gray-400 mb-12 leading-relaxed max-w-md">
-                Whether you are planning a high-rise commercial tower or a private luxury residence, our engineering team is ready to consult.
-            </p>
-
-            <div class="space-y-12">
-                
-                <div class="flex items-start group">
-                    <div class="mt-1 mr-6 p-3 bg-white/5 rounded-full group-hover:bg-gold/20 transition duration-500">
-                        <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                        </svg>
+    <header class="pt-36 pb-14 bg-[#1A0508] border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-10">
+            <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-end">
+                <div>
+                    <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-5">Start a Project</h4>
+                    <h1 class="text-5xl md:text-7xl font-serif text-white leading-tight mb-6">Tell Us What<br><span class="italic">You Need Built.</span></h1>
+                    <p class="text-gray-400 text-lg leading-relaxed max-w-2xl">
+                        This inquiry form is built for real construction conversations in the Philippines. Whether you need design-build delivery, a renovation for an active business, or a sustainable space with solar and plant-forward interiors, we can qualify the project faster with the right details upfront.
+                    </p>
+                </div>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="border border-white/5 bg-[#220A0F]/70 p-5">
+                        <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-3">Core Service</span>
+                        <p class="text-white font-serif text-xl">Design-Build</p>
                     </div>
-                    <div>
-                        <h3 class="text-white font-bold uppercase tracking-widest text-sm mb-2">Corporate Headquarters</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Penthouse Level, The Bryit Tower<br>
-                            Ayala Avenue, Makati City<br>
-                            Metro Manila, Philippines
-                        </p>
-                        <a href="#" class="text-gold text-xs mt-2 inline-block hover:underline">View on Map &rarr;</a>
+                    <div class="border border-white/5 bg-[#220A0F]/70 p-5">
+                        <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-3">Core Service</span>
+                        <p class="text-white font-serif text-xl">Renovation</p>
+                    </div>
+                    <div class="border border-white/5 bg-[#220A0F]/70 p-5">
+                        <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-3">Core Service</span>
+                        <p class="text-white font-serif text-xl">Sustainable</p>
                     </div>
                 </div>
-
-                <div class="flex items-start group">
-                    <div class="mt-1 mr-6 p-3 bg-white/5 rounded-full group-hover:bg-gold/20 transition duration-500">
-                        <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="text-white font-bold uppercase tracking-widest text-sm mb-2">Satellite Office</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Unit 808, High Street Corporate Plaza<br>
-                            Bonifacio Global City (BGC)<br>
-                            Taguig, Metro Manila
-                        </p>
-                        <a href="#" class="text-gold text-xs mt-2 inline-block hover:underline">View on Map &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="flex items-start pt-8 border-t border-white/10">
-                    <div class="mt-1 mr-6">
-                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="text-white text-sm">+63 (02) 8888 1234</p>
-                        <p class="text-gold text-sm">inquiry@bryitbuilders.com</p>
-                    </div>
-                </div>
-
             </div>
         </div>
+    </header>
 
-        <div class="w-full md:w-1/2 bg-[#0A0C10] p-10 md:p-20 flex flex-col justify-center">
-            <form class="space-y-8">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="flex flex-col">
-                        <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Full Name</label>
-                        <input type="text" class="input-field bg-transparent border-b border-white/20 py-3 text-white focus:outline-none transition duration-300" placeholder="John Doe">
+    <section class="py-16 md:py-20 bg-[#220A0F] border-b border-white/5">
+        <div class="max-w-[1680px] mx-auto px-5 md:px-8 xl:px-10 grid lg:grid-cols-[0.58fr_1.42fr] gap-8 xl:gap-10">
+            <div class="bg-[#160508] p-8 md:p-8 xl:p-9">
+                <h2 class="text-3xl font-serif text-ivory mb-6">Office & Contact</h2>
+                <p class="text-gray-400 leading-loose mb-8 max-w-md">
+                    Use the form to tell us about your site, timeline, and priorities. The more complete the inquiry, the faster we can assess fit, advise next steps, and schedule a proper consultation.
+                </p>
+
+                <div class="space-y-8">
+                    <div class="flex items-start group">
+                        <div class="mt-1 mr-5 p-3 bg-white/5 rounded-full group-hover:bg-gold/20 transition duration-500">
+                            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-ivory font-bold uppercase tracking-widest text-sm mb-2">Office Location</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Unit 1001, One Global Place,<br>
+                                5th Avenue corner 25th Street,<br>
+                                Bonifacio Global City, Taguig City
+                            </p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Unit%201001%2C%20One%20Global%20Place%2C%205th%20Avenue%20corner%2025th%20Street%2C%20Bonifacio%20Global%20City%2C%20Taguig%20City" target="_blank" rel="noopener noreferrer" class="text-gold text-xs mt-2 inline-block hover:underline">View on Map &rarr;</a>
+                        </div>
                     </div>
-                    <div class="flex flex-col">
-                        <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Email Address</label>
-                        <input type="email" class="input-field bg-transparent border-b border-white/20 py-3 text-white focus:outline-none transition duration-300" placeholder="john@company.com">
+
+                    <div class="flex items-start group">
+                        <div class="mt-1 mr-5 p-3 bg-white/5 rounded-full group-hover:bg-gold/20 transition duration-500">
+                            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-ivory font-bold uppercase tracking-widest text-sm mb-2">Direct Contact</h3>
+                            <a href="tel:+639283850673" class="text-soft text-sm hover:text-gold transition">+63 928 385 0673</a>
+                            <p class="text-gold text-sm mt-1">inquiry@bryitbuilders.com</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="flex flex-col">
-                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Project Type</label>
-                    <select class="input-field bg-[#0A0C10] border-b border-white/20 py-3 text-white focus:outline-none transition duration-300">
-                        <option>Commercial Construction</option>
-                        <option>Residential Luxury Estate</option>
-                        <option>Renovation & Restoration</option>
-                        <option>Industrial / Warehouse</option>
-                    </select>
+                <div class="grid sm:grid-cols-2 gap-4 mt-10">
+                    <div class="p-5 bg-[#220A0F]/40">
+                        <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-2">Best For</span>
+                        <p class="text-gray-400 text-sm leading-relaxed">Owners who want a serious first conversation about scope, site conditions, and commercial reality.</p>
+                    </div>
+                    <div class="p-5 bg-[#220A0F]/40">
+                        <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-2">Coverage</span>
+                        <p class="text-gray-400 text-sm leading-relaxed">Metro Manila, BGC, Makati, Quezon City, CALABARZON, and nearby Philippine growth corridors.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-white/5 bg-[#1A0508] p-8 md:p-12 xl:p-14">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-serif text-ivory mb-3">Project Inquiry</h2>
+                        <p class="text-gray-400 text-sm leading-relaxed max-w-2xl">Share the essentials below so we can understand the project, qualify the opportunity, and recommend the right next step without wasting your time.</p>
+                    </div>
+                    <p class="text-gold text-[10px] uppercase tracking-[0.4em] font-bold">Structured Intake</p>
                 </div>
 
-                <div class="flex flex-col">
-                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Estimated Budget (PHP)</label>
-                    <select class="input-field bg-[#0A0C10] border-b border-white/20 py-3 text-white focus:outline-none transition duration-300">
-                        <option>₱10M - ₱30M</option>
-                        <option>₱30M - ₱100M</option>
-                        <option>₱100M+</option>
-                        <option>Undetermined</option>
-                    </select>
-                </div>
+                <form class="space-y-6">
+                    <div class="grid xl:grid-cols-[1.02fr_1.18fr] gap-6">
+                        <div class="border border-white/5 bg-[#220A0F]/45 p-6 md:p-7">
+                            <h3 class="text-ivory font-semibold uppercase tracking-[0.3em] text-xs mb-5">Client Details</h3>
+                            <div class="space-y-5">
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Full Name</label>
+                                    <input type="text" class="input-field" placeholder="Juan Dela Cruz">
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-5">
+                                    <div class="flex flex-col">
+                                        <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Mobile Number</label>
+                                        <input type="tel" class="input-field" placeholder="+63 912 345 6789">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Email Address</label>
+                                        <input type="email" class="input-field" placeholder="juan@company.com">
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Preferred Consultation</label>
+                                    <select class="input-field">
+                                        <option>Phone Call</option>
+                                        <option>Site Visit</option>
+                                        <option>Office Meeting</option>
+                                        <option>Zoom / Google Meet</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="flex flex-col">
-                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Project Details</label>
-                    <textarea rows="4" class="input-field bg-transparent border-b border-white/20 py-3 text-white focus:outline-none transition duration-300" placeholder="Describe the scope, location, and timeline..."></textarea>
-                </div>
+                        <div class="border border-white/5 bg-[#220A0F]/45 p-6 md:p-7">
+                            <h3 class="text-ivory font-semibold uppercase tracking-[0.3em] text-xs mb-5">Project Overview</h3>
+                            <div class="grid md:grid-cols-2 gap-5">
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Service Needed</label>
+                                    <select class="input-field">
+                                        <option>Design-Build</option>
+                                        <option>Renovation</option>
+                                        <option>Sustainable Construction</option>
+                                        <option>Not Sure Yet</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Property Type</label>
+                                    <select class="input-field">
+                                        <option>Private Residence</option>
+                                        <option>Restaurant / Cafe</option>
+                                        <option>Office</option>
+                                        <option>Retail / Showroom</option>
+                                        <option>Clinic / Wellness</option>
+                                        <option>Warehouse / Industrial</option>
+                                        <option>Mixed-Use</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col md:col-span-2">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Project Location</label>
+                                    <input type="text" class="input-field" placeholder="City / Province / Site Address">
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Lot / Floor Area</label>
+                                    <input type="text" class="input-field" placeholder="e.g. 250 sqm lot / 180 sqm floor area">
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Project Stage</label>
+                                    <select class="input-field">
+                                        <option>Just Exploring</option>
+                                        <option>Ready for Design</option>
+                                        <option>Ready for Construction</option>
+                                        <option>With Existing Plans</option>
+                                        <option>With Permits / Approvals</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <button type="button" class="group w-full bg-gold text-black font-bold uppercase tracking-[0.2em] py-5 mt-8 hover:bg-white transition duration-500 flex justify-center items-center">
-                    Submit Proposal
-                    <svg class="w-4 h-4 ml-2 group-hover:translate-x-2 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </button>
-            </form>
+                    <div class="grid xl:grid-cols-2 gap-6">
+                        <div class="border border-white/5 bg-[#220A0F]/45 p-6 md:p-7">
+                            <h3 class="text-ivory font-semibold uppercase tracking-[0.3em] text-xs mb-5">Budget & Delivery</h3>
+                            <div class="grid gap-5">
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Estimated Budget (PHP)</label>
+                                    <select class="input-field">
+                                        <option>Below ₱3M</option>
+                                        <option>₱3M - ₱5M</option>
+                                        <option>₱5M - ₱10M</option>
+                                        <option>₱10M - ₱15M</option>
+                                        <option>To Be Discussed</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Target Timeline</label>
+                                    <select class="input-field">
+                                        <option>As Soon As Possible</option>
+                                        <option>Within 1-3 Months</option>
+                                        <option>Within 3-6 Months</option>
+                                        <option>6+ Months</option>
+                                        <option>Still Planning</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Site Ownership</label>
+                                    <select class="input-field">
+                                        <option>Owned</option>
+                                        <option>Leased</option>
+                                        <option>Under Acquisition</option>
+                                        <option>Still Looking for Site</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border border-white/5 bg-[#220A0F]/45 p-6 md:p-7">
+                            <h3 class="text-ivory font-semibold uppercase tracking-[0.3em] text-xs mb-5">Service-Specific Notes</h3>
+                            <div class="grid gap-5">
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Design-Build Scope</label>
+                                    <select class="input-field">
+                                        <option>Architecture to Construction</option>
+                                        <option>Architecture Only</option>
+                                        <option>Engineering Only</option>
+                                        <option>Permit Assistance + Build</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Renovation Occupancy</label>
+                                    <select class="input-field">
+                                        <option>Vacant Site</option>
+                                        <option>Operational During Works</option>
+                                        <option>Partially Occupied</option>
+                                        <option>For Turnover Preparation</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Sustainability Interest</label>
+                                    <select class="input-field">
+                                        <option>Solar Energy</option>
+                                        <option>Plant-Forward Interiors</option>
+                                        <option>Passive Cooling</option>
+                                        <option>Full Sustainable Package</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                    <div class="border border-white/5 bg-[#220A0F]/45 p-6 md:p-7">
+                        <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-3 block">Project Details</label>
+                        <textarea rows="10" class="input-field w-full min-h-[320px]" placeholder="Describe the project, the current site condition, the intended use of the space, and anything we should know about your scope, target completion, or design direction."></textarea>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 pt-2">
+                        <p class="text-gray-500 text-sm max-w-xl">A more complete brief helps us respond with a more useful next step, whether that is a call, a site visit, or an initial project assessment.</p>
+                        <button type="button" class="group bg-gold text-black font-bold uppercase tracking-[0.2em] px-10 py-5 hover:bg-white transition duration-500 flex justify-center items-center">
+                            Submit Inquiry
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-2 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
+    </section>
 
-    </div>
-
-    <div class="w-full h-64 bg-[#121418] relative overflow-hidden border-t border-white/5">
-        <svg class="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
-            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
-            </pattern>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-        <div class="absolute inset-0 flex items-center justify-center">
-            <p class="text-gold text-[10px] uppercase tracking-[0.5em]">Servicing Metro Manila & CALABARZON</p>
+    <section class="py-14 bg-[#1A0508]">
+        <div class="max-w-7xl mx-auto px-6 md:px-10">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="border border-white/5 bg-[#220A0F]/50 p-6">
+                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-3">For Design-Build</span>
+                    <p class="text-gray-400 text-sm leading-loose">Tell us if you need full architecture-to-construction delivery, engineering documentation, or permit support as part of the package.</p>
+                </div>
+                <div class="border border-white/5 bg-[#220A0F]/50 p-6">
+                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-3">For Renovation</span>
+                    <p class="text-gray-400 text-sm leading-loose">Let us know whether the business or residence will stay occupied during the works so we can think through downtime and phasing early.</p>
+                </div>
+                <div class="border border-white/5 bg-[#220A0F]/50 p-6">
+                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-3">For Sustainable</span>
+                    <p class="text-gray-400 text-sm leading-loose">Mention if you are interested in solar, passive cooling, tropical material choices, or plant-forward interiors from the start.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
 </body>
 </html>

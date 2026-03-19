@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovation | Bryit Builders Corporation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #1A0508; }
+        .font-serif { font-family: 'Cinzel', serif; }
+        .text-gold { color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        .border-gold { border-color: #D4AF37; }
+    </style>
+</head>
+<body class="text-slate-300 antialiased">
+
+    <nav class="fixed w-full z-50 py-8 px-10 flex justify-between items-center bg-[#1A0508]/95 backdrop-blur-lg border-b border-white/5">
+        <a href="index.html" class="block w-[250px] md:w-[280px]">
+            <img src="assets/images/bryit-builders-logo.svg" alt="Bryit Builders Corporation" class="w-full h-auto max-h-[118px] object-contain">
+        </a>
+        <div class="hidden md:flex items-center space-x-10 text-[10px] uppercase tracking-[0.4em] font-semibold">
+            <a href="index.html" class="hover:text-gold transition">Home</a>
+            <div class="relative group/services">
+                <button class="flex items-center gap-1.5 uppercase text-gold">
+                    Services
+                    <svg class="w-3 h-3 transition-transform duration-300 group-hover/services:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="absolute top-full left-0 pt-3 hidden group-hover/services:block z-50">
+                    <div class="bg-[#1A0508] border border-white/10 min-w-[210px]">
+                        <a href="design-build.html" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition">Design &amp; Build</a>
+                        <a href="renovation.html" class="block px-6 py-3.5 text-gold hover:bg-[#2D0B12] transition border-t border-white/5">Renovation</a>
+                        <a href="sustainable.html" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition border-t border-white/5">Sustainable Construction</a>
+                    </div>
+                </div>
+            </div>
+            <a href="portfolio.html" class="hover:text-gold transition">Registry</a>
+            <a href="about.html" class="hover:text-gold transition">The Firm</a>
+            <a href="contact.html" class="bg-gold text-black px-6 py-2 ml-4 hover:bg-white transition duration-300">Inquiry</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-screen flex items-end overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1800&q=80" alt="Restaurant renovation interior" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1A0508] via-[#1A0508]/50 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-10 w-full pb-24">
+            <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">Space Transformation</h4>
+            <h1 class="text-6xl md:text-8xl font-serif text-white leading-tight mb-6">
+                Your Space.<br><span class="italic text-gold">Reimagined.</span>
+            </h1>
+            <p class="text-gray-300 text-lg max-w-xl leading-relaxed">
+                From neighborhood restaurants and cafes to offices, clinics, salons, and homes, we improve spaces that need to look better, work harder, and stay open for business as much as possible.
+            </p>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="py-24 bg-[#1A0508]">
+        <div class="max-w-7xl mx-auto px-10 grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">Why Renovation Matters</h4>
+                <h2 class="text-4xl font-serif text-white mb-6 leading-tight">Upgrade the Space<br>Without Starting Over.</h2>
+                <div class="w-16 h-px bg-gold mb-8"></div>
+                <p class="text-gray-400 leading-loose mb-6">
+                    In the Philippines, renovation is often the fastest way to raise the value of an existing space. A dated restaurant can feel more premium. A small cafe can fit more customers. A family home can function better without the cost of buying a new property.
+                </p>
+                <p class="text-gray-400 leading-loose">
+                    We approach renovation with the same discipline we bring to new builds: assess the existing structure first, redesign what matters, then execute cleanly so the finished space feels deliberate rather than patched together.
+                </p>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80" alt="Modern cafe interior renovation" class="w-full h-[480px] object-cover rounded-sm shadow-2xl grayscale hover:grayscale-0 transition duration-700">
+                <div class="absolute -bottom-6 -right-6 w-28 h-28 border-b-2 border-r-2 border-gold hidden md:block"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Renovate -->
+    <section class="py-24 bg-[#220A0F]">
+        <div class="max-w-7xl mx-auto px-10">
+            <div class="mb-16">
+                <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">Our Scope</h4>
+                <h2 class="text-4xl font-serif text-white mb-4">What We Renovate</h2>
+                <div class="w-16 h-px bg-gold"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+
+                <!-- Restaurants & F&B -->
+                <div class="group relative h-80 overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Restaurant Renovation" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-1">F&amp;B / Hospitality</span>
+                        <h3 class="text-xl font-serif text-white">Restaurants & Cafes</h3>
+                        <p class="text-gray-400 text-xs mt-2 max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-500">Dining room refreshes, kitchen-facing coordination, flooring, lighting, and storefront improvements for restaurants, milk tea shops, cafes, and casual dining brands.</p>
+                    </div>
+                </div>
+
+                <!-- Offices -->
+                <div class="group relative h-80 overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Office Renovation" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-1">Corporate / BPO</span>
+                        <h3 class="text-xl font-serif text-white">Office Spaces</h3>
+                        <p class="text-gray-400 text-xs mt-2 max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-500">Workspace upgrades for offices, clinics, salons, and service businesses that need better layout, storage, acoustics, and customer-facing presentation.</p>
+                    </div>
+                </div>
+
+                <!-- Retail -->
+                <div class="group relative h-80 overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80" alt="Retail Renovation" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-1">Retail / Commercial</span>
+                        <h3 class="text-xl font-serif text-white">Retail & Showrooms</h3>
+                        <p class="text-gray-400 text-xs mt-2 max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-500">Retail and showroom improvements that sharpen product display, circulation, branding, and the day-to-day durability needed in busy local commercial spaces.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- Homes -->
+                <div class="group relative h-72 overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80" alt="Home Renovation" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-1">Residential</span>
+                        <h3 class="text-xl font-serif text-white">Home Renovation & Upgrades</h3>
+                        <p class="text-gray-400 text-xs mt-2 max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-500">Kitchen upgrades, toilet and bath renovations, facade refreshes, room additions, and interior improvements for homes that need a cleaner modern standard.</p>
+                    </div>
+                </div>
+
+                <!-- Heritage -->
+                <div class="group relative h-72 overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80" alt="Heritage Restoration" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-1">Heritage / Ancestral</span>
+                        <h3 class="text-xl font-serif text-white">Ancestral Home Restoration</h3>
+                        <p class="text-gray-400 text-xs mt-2 max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-500">Careful upgrades for older structures that need reinforcement, utility replacement, and finish renewal while keeping the character worth saving.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="py-24 bg-[#1A0508]">
+        <div class="max-w-7xl mx-auto px-10">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">How We Approach It</h4>
+                    <h2 class="text-4xl font-serif text-white mb-6">Engineering Behind<br>Every Upgrade.</h2>
+                    <div class="w-16 h-px bg-gold mb-8"></div>
+                    <p class="text-gray-400 leading-loose mb-6">
+                        Renovation is not just repainting a space. On occupied sites, it is a business decision that affects foot traffic, staff movement, mechanical systems, and customer perception.
+                    </p>
+                    <p class="text-gray-400 leading-loose mb-8">
+                        We start with what exists, then build a smarter upgrade path around it. That is especially important for Philippine restaurants and small businesses where every square meter, every service counter, and every day of downtime matters.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 border border-white/5 hover:border-gold/30 transition">
+                            <span class="text-gold font-serif text-2xl font-bold opacity-40">01</span>
+                            <div>
+                                <h4 class="text-white text-sm font-semibold uppercase tracking-widest mb-1">Site & Structural Assessment</h4>
+                                <p class="text-gray-500 text-xs leading-relaxed">Evaluate existing conditions, identify structural concerns, and determine the safest path forward before a single tile is broken.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 border border-white/5 hover:border-gold/30 transition">
+                            <span class="text-gold font-serif text-2xl font-bold opacity-40">02</span>
+                            <div>
+                                <h4 class="text-white text-sm font-semibold uppercase tracking-widest mb-1">Design & Space Planning</h4>
+                                <p class="text-gray-500 text-xs leading-relaxed">Space layout optimization, material selection, and 3D visualization aligned to your brand, budget, and timeline.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 border border-white/5 hover:border-gold/30 transition">
+                            <span class="text-gold font-serif text-2xl font-bold opacity-40">03</span>
+                            <div>
+                                <h4 class="text-white text-sm font-semibold uppercase tracking-widest mb-1">Phased Construction</h4>
+                                <p class="text-gray-500 text-xs leading-relaxed">For occupied commercial spaces, we plan demolition and construction in phases to minimize downtime and protect your ongoing operations.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 border border-white/5 hover:border-gold/30 transition">
+                            <span class="text-gold font-serif text-2xl font-bold opacity-40">04</span>
+                            <div>
+                                <h4 class="text-white text-sm font-semibold uppercase tracking-widest mb-1">Snagging & Handover</h4>
+                                <p class="text-gray-500 text-xs leading-relaxed">Final quality walkthrough with the client before handover. Nothing gets signed off until it meets our standard and yours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Renovation Process" class="w-full h-[600px] object-cover rounded-sm shadow-2xl">
+                    <div class="absolute -top-6 -left-6 w-28 h-28 border-t-2 border-l-2 border-gold hidden md:block"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gold text-black text-center">
+        <h2 class="text-3xl font-serif font-bold mb-4 uppercase tracking-tighter">Ready to Transform Your Space?</h2>
+        <p class="text-black/60 mb-8 text-sm max-w-xl mx-auto">Tell us about your space and what you want it to become. We'll handle the rest.</p>
+        <a href="contact.html" class="border-2 border-black px-12 py-4 font-bold uppercase text-xs tracking-[0.3em] hover:bg-black hover:text-white transition">Request a Site Survey</a>
+    </section>
+
+    <footer class="py-12 bg-[#0D0305] text-center">
+        <p class="text-[10px] uppercase tracking-[0.5em] text-gray-600">&copy; 2026 Bryit Builders Corp.</p>
+    </footer>
+
+</body>
+</html>

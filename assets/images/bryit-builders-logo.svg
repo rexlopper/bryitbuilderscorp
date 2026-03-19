@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 290" role="img" aria-labelledby="title desc">
+  <title id="title">Bryit Builders Corporation Logo</title>
+  <desc id="desc">Bryit Builders Corporation monogram logo with wordmark and gold line</desc>
+  <defs>
+    <linearGradient id="silver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbf8f6"/>
+      <stop offset="45%" stop-color="#cfd3d8"/>
+      <stop offset="100%" stop-color="#7f8590"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5d978"/>
+      <stop offset="55%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#9e7724"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(210 14)">
+    <path d="M72 0 L140 31 L140 52 L86 76 L86 58 L113 45 L72 26 Z" fill="url(#silver)"/>
+    <path d="M72 0 L72 26 L31 46 L31 113 L12 103 L12 33 Z" fill="url(#silver)"/>
+    <path d="M140 52 L140 103 L93 126 L93 108 L121 95 L121 68 L86 84 L86 63 Z" fill="url(#gold)"/>
+    <path d="M72 26 L72 106 L93 117 L93 137 L49 114 L49 44 Z" fill="url(#gold)"/>
+    <path d="M72 0 L31 20 L49 29 L72 18 L104 33 L121 25 Z" fill="#6b1f2c" opacity="0.45"/>
+  </g>
+
+  <text x="280" y="188" text-anchor="middle" fill="#D4AF37" font-size="45" font-family="Georgia, 'Times New Roman', serif" letter-spacing="3">BRYIT BUILDERS</text>
+  <text x="280" y="222" text-anchor="middle" fill="#D4AF37" font-size="18" font-family="Georgia, 'Times New Roman', serif" letter-spacing="11">CORPORATION</text>
+
+  <rect x="0" y="262" width="560" height="6" fill="url(#gold)"/>
+</svg>
