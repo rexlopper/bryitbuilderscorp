@@ -17,6 +17,11 @@
         .input-field { background-color: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.10); padding: 0.95rem 1rem; color: #E8D8CB; transition: all 0.3s ease; }
         .input-field:focus { border-color: #D4AF37; box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.18); outline: none; }
         .input-field::placeholder { color: rgba(216,196,181,0.46); }
+        .input-field.error-field { border-color: #b84a4a; box-shadow: 0 0 0 1px rgba(184, 74, 74, 0.18); }
+        .field-error { color: #d98a8a; font-size: 0.72rem; margin-top: 0.45rem; line-height: 1.35; min-height: 1rem; display: none; }
+        .field-error.active { display: block; }
+        .form-success { color: #d7c29a; font-size: 0.86rem; line-height: 1.6; display: none; }
+        .form-success.active { display: block; }
         select.input-field option { color: #111111; }
     </style>
 </head>
@@ -137,28 +142,31 @@
                     <p class="text-gold text-[10px] uppercase tracking-[0.4em] font-bold">Structured Intake</p>
                 </div>
 
-                <form class="space-y-6">
+                <form id="inquiry-form" class="space-y-6" action="https://docs.google.com/forms/d/e/1FAIpQLSd-Nkq07xgToyJKudOMjOQdVxNe26raPZ1QDUW_DNaFaXeD5Q/formResponse" method="POST" target="google-form-submit" novalidate>
                     <div class="grid xl:grid-cols-[1.02fr_1.18fr] gap-6">
                         <div class="border border-white/5 bg-[#220A0F]/45 p-6 md:p-7">
                             <h3 class="text-ivory font-semibold uppercase tracking-[0.3em] text-xs mb-5">Client Details</h3>
                             <div class="space-y-5">
                                 <div class="flex flex-col">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Full Name</label>
-                                    <input type="text" class="input-field" placeholder="Juan Dela Cruz">
+                                    <input type="text" name="entry.1275002328" class="input-field" placeholder="Juan Dela Cruz" data-label="Full Name" data-required="true">
+                                    <p class="field-error" data-error-for="entry.1275002328"></p>
                                 </div>
                                 <div class="grid md:grid-cols-2 gap-5">
                                     <div class="flex flex-col">
                                         <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Mobile Number</label>
-                                        <input type="tel" class="input-field" placeholder="+63 912 345 6789">
+                                        <input type="tel" name="entry.726395554" class="input-field" placeholder="+63 912 345 6789" data-label="Mobile Number" data-required="true" data-validate="phone">
+                                        <p class="field-error" data-error-for="entry.726395554"></p>
                                     </div>
                                     <div class="flex flex-col">
-                                        <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Email Address</label>
-                                        <input type="email" class="input-field" placeholder="juan@company.com">
+                                        <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Email</label>
+                                        <input type="email" name="entry.1814151605" class="input-field" placeholder="juan@company.com" data-label="Email" data-required="true" data-validate="email">
+                                        <p class="field-error" data-error-for="entry.1814151605"></p>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Preferred Consultation</label>
-                                    <select class="input-field">
+                                    <select name="entry.517312038" class="input-field">
                                         <option>Phone Call</option>
                                         <option>Site Visit</option>
                                         <option>Office Meeting</option>
@@ -173,7 +181,7 @@
                             <div class="grid md:grid-cols-2 gap-5">
                                 <div class="flex flex-col">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Service Needed</label>
-                                    <select class="input-field">
+                                    <select name="entry.1984541962" class="input-field">
                                         <option>Design-Build</option>
                                         <option>Renovation</option>
                                         <option>Sustainable Construction</option>
@@ -182,7 +190,7 @@
                                 </div>
                                 <div class="flex flex-col">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Property Type</label>
-                                    <select class="input-field">
+                                    <select name="entry.135290268" class="input-field">
                                         <option>Private Residence</option>
                                         <option>Restaurant / Cafe</option>
                                         <option>Office</option>
@@ -194,15 +202,17 @@
                                 </div>
                                 <div class="flex flex-col md:col-span-2">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Project Location</label>
-                                    <input type="text" class="input-field" placeholder="City / Province / Site Address">
+                                    <input type="text" name="entry.1296542224" class="input-field" placeholder="City / Province / Site Address" data-label="Project Location" data-required="true">
+                                    <p class="field-error" data-error-for="entry.1296542224"></p>
                                 </div>
                                 <div class="flex flex-col">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Lot / Floor Area</label>
-                                    <input type="text" class="input-field" placeholder="e.g. 250 sqm lot / 180 sqm floor area">
+                                    <input type="text" name="entry.1213328942" class="input-field" placeholder="e.g. 250 sqm lot / 180 sqm floor area" data-label="Lot / Floor Area" data-required="true">
+                                    <p class="field-error" data-error-for="entry.1213328942"></p>
                                 </div>
                                 <div class="flex flex-col">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Project Stage</label>
-                                    <select class="input-field">
+                                    <select name="entry.1309140523" class="input-field">
                                         <option>Just Exploring</option>
                                         <option>Ready for Design</option>
                                         <option>Ready for Construction</option>
@@ -220,7 +230,7 @@
                             <div class="grid gap-5">
                                 <div class="flex flex-col">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Estimated Budget (PHP)</label>
-                                    <select class="input-field">
+                                    <select name="entry.1598539973" class="input-field">
                                         <option>Below ₱3M</option>
                                         <option>₱3M - ₱5M</option>
                                         <option>₱5M - ₱10M</option>
@@ -230,7 +240,7 @@
                                 </div>
                                 <div class="flex flex-col">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Target Timeline</label>
-                                    <select class="input-field">
+                                    <select name="entry.1872057791" class="input-field">
                                         <option>As Soon As Possible</option>
                                         <option>Within 1-3 Months</option>
                                         <option>Within 3-6 Months</option>
@@ -240,7 +250,7 @@
                                 </div>
                                 <div class="flex flex-col">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Site Ownership</label>
-                                    <select class="input-field">
+                                    <select name="entry.1165128218" class="input-field">
                                         <option>Owned</option>
                                         <option>Leased</option>
                                         <option>Under Acquisition</option>
@@ -255,29 +265,32 @@
                             <div class="grid gap-5">
                                 <div class="flex flex-col">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Design-Build Scope</label>
-                                    <select class="input-field">
+                                    <select name="entry.71898794" class="input-field">
                                         <option>Architecture to Construction</option>
                                         <option>Architecture Only</option>
                                         <option>Engineering Only</option>
                                         <option>Permit Assistance + Build</option>
+                                        <option>Not Applicable</option>
                                     </select>
                                 </div>
                                 <div class="flex flex-col">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Renovation Occupancy</label>
-                                    <select class="input-field">
+                                    <select name="entry.677825017" class="input-field">
                                         <option>Vacant Site</option>
                                         <option>Operational During Works</option>
                                         <option>Partially Occupied</option>
                                         <option>For Turnover Preparation</option>
+                                        <option>Not Applicable</option>
                                     </select>
                                 </div>
                                 <div class="flex flex-col">
                                     <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Sustainability Interest</label>
-                                    <select class="input-field">
+                                    <select name="entry.1357360553" class="input-field">
                                         <option>Solar Energy</option>
                                         <option>Plant-Forward Interiors</option>
                                         <option>Passive Cooling</option>
                                         <option>Full Sustainable Package</option>
+                                        <option>Not Applicable</option>
                                     </select>
                                 </div>
                             </div>
@@ -286,12 +299,17 @@
 
                     <div class="border border-white/5 bg-[#220A0F]/45 p-6 md:p-7">
                         <label class="text-[10px] uppercase tracking-widest text-gray-500 mb-3 block">Project Details</label>
-                        <textarea rows="10" class="input-field w-full min-h-[320px]" placeholder="Describe the project, the current site condition, the intended use of the space, and anything we should know about your scope, target completion, or design direction."></textarea>
+                        <textarea rows="10" name="entry.927503165" class="input-field w-full min-h-[320px]" placeholder="Describe the project, the current site condition, the intended use of the space, and anything we should know about your scope, target completion, or design direction." data-label="Project Details" data-required="true"></textarea>
+                        <p class="field-error" data-error-for="entry.927503165"></p>
                     </div>
 
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 pt-2">
-                        <p class="text-gray-500 text-sm max-w-xl">A more complete brief helps us respond with a more useful next step, whether that is a call, a site visit, or an initial project assessment.</p>
-                        <button type="button" class="group bg-gold text-black font-bold uppercase tracking-[0.2em] px-10 py-5 hover:bg-white transition duration-500 flex justify-center items-center">
+                        <p class="text-gray-500 text-sm max-w-xl">A more complete brief helps us respond with a more useful next step, whether that is a call, a site visit, or an initial project assessment. Submissions are sent directly to our Google Forms intake and recorded in Google Sheets.</p>
+                        <div class="md:text-right max-w-md">
+                            <p id="form-submit-success" class="form-success" aria-live="polite"></p>
+                            <p id="form-submit-error" class="field-error max-w-md text-right" aria-live="polite"></p>
+                        </div>
+                        <button id="form-submit-button" type="submit" class="group bg-gold text-black font-bold uppercase tracking-[0.2em] px-10 py-5 hover:bg-white transition duration-500 flex justify-center items-center">
                             Submit Inquiry
                             <svg class="w-4 h-4 ml-2 group-hover:translate-x-2 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                         </button>
@@ -319,6 +337,127 @@
             </div>
         </div>
     </section>
+
+    <iframe name="google-form-submit" class="hidden"></iframe>
+
+    <script>
+        const inquiryForm = document.getElementById('inquiry-form');
+        const submitError = document.getElementById('form-submit-error');
+        const submitSuccess = document.getElementById('form-submit-success');
+        const submitButton = document.getElementById('form-submit-button');
+        const submitFrame = document.querySelector('iframe[name="google-form-submit"]');
+
+        if (inquiryForm) {
+            const phonePattern = /^(?:\+63\s?\d{3}\s?\d{3}\s?\d{4}|09\d{9}|\+639\d{9})$/;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const trackedFields = inquiryForm.querySelectorAll('[data-label]');
+            let awaitingSuccessfulSubmit = false;
+
+            const showFieldError = (field, message) => {
+                const errorNode = inquiryForm.querySelector(`[data-error-for="${field.name}"]`);
+                field.classList.add('error-field');
+                if (errorNode) {
+                    errorNode.textContent = message;
+                    errorNode.classList.add('active');
+                }
+            };
+
+            const clearFieldError = (field) => {
+                const errorNode = inquiryForm.querySelector(`[data-error-for="${field.name}"]`);
+                field.classList.remove('error-field');
+                if (errorNode) {
+                    errorNode.textContent = '';
+                    errorNode.classList.remove('active');
+                }
+            };
+
+            const validateField = (field) => {
+                const value = field.value.trim();
+                const label = field.dataset.label || 'This field';
+
+                clearFieldError(field);
+
+                if (field.dataset.required === 'true' && !value) {
+                    showFieldError(field, `${label} is required.`);
+                    return false;
+                }
+
+                if (!value) {
+                    return true;
+                }
+
+                if (field.dataset.validate === 'phone' && !phonePattern.test(value)) {
+                    showFieldError(field, 'Format is improper. Use +63 XXX XXX XXX or 09XXXXXXXXX.');
+                    return false;
+                }
+
+                if (field.dataset.validate === 'email' && !emailPattern.test(value)) {
+                    showFieldError(field, 'Format is improper. Enter a valid email address.');
+                    return false;
+                }
+
+                return true;
+            };
+
+            trackedFields.forEach((field) => {
+                field.addEventListener('input', () => validateField(field));
+                field.addEventListener('blur', () => validateField(field));
+            });
+
+            inquiryForm.addEventListener('submit', (event) => {
+                let isValid = true;
+                submitError.textContent = '';
+                submitError.classList.remove('active');
+                submitSuccess.textContent = '';
+                submitSuccess.classList.remove('active');
+
+                trackedFields.forEach((field) => {
+                    if (!validateField(field)) {
+                        isValid = false;
+                    }
+                });
+
+                if (!isValid) {
+                    event.preventDefault();
+                    awaitingSuccessfulSubmit = false;
+                    submitError.textContent = 'Please correct the highlighted fields before submitting.';
+                    submitError.classList.add('active');
+                    const firstInvalid = inquiryForm.querySelector('.error-field');
+                    if (firstInvalid) {
+                        firstInvalid.focus();
+                    }
+                    return;
+                }
+
+                awaitingSuccessfulSubmit = true;
+                if (submitButton) {
+                    submitButton.disabled = true;
+                    submitButton.classList.add('opacity-70', 'cursor-not-allowed');
+                }
+            });
+
+            if (submitFrame) {
+                submitFrame.addEventListener('load', () => {
+                    if (!awaitingSuccessfulSubmit) {
+                        return;
+                    }
+
+                    awaitingSuccessfulSubmit = false;
+                    inquiryForm.reset();
+                    trackedFields.forEach((field) => clearFieldError(field));
+                    submitError.textContent = '';
+                    submitError.classList.remove('active');
+                    submitSuccess.textContent = 'Thank you for your inquiry. We would be glad to work with you and will review your project details shortly.';
+                    submitSuccess.classList.add('active');
+
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.classList.remove('opacity-70', 'cursor-not-allowed');
+                    }
+                });
+            }
+        }
+    </script>
 
 </body>
 </html>
