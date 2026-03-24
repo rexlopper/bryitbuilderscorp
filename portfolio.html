@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Registry | Bryit Builders Corporation</title>
+    <title>Capabilities Catalog | Bryit Builders Corporation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -12,17 +12,16 @@
         .text-gold { color: #D4AF37; }
         .bg-gold { background-color: #D4AF37; }
         .border-gold { border-color: #D4AF37; }
-        .hover-reveal { transition: all 0.5s ease; }
     </style>
 </head>
 <body class="text-slate-300 antialiased">
 
     <nav class="fixed w-full z-50 py-8 px-10 flex justify-between items-center bg-[#1A0508]/95 backdrop-blur-lg border-b border-white/5">
-        <a href="index.html" class="block w-[250px] md:w-[280px]">
+        <a href="./" class="block w-[250px] md:w-[280px]">
             <img src="assets/images/bryit-builders-logo.svg" alt="Bryit Builders Corporation" class="w-full h-auto max-h-[118px] object-contain">
         </a>
-        <div class="hidden md:flex items-center space-x-10 text-[10px] uppercase tracking-[0.4em] font-semibold">
-            <a href="index.html" class="hover:text-gold transition">Home</a>
+        <div class="hidden md:flex items-center space-x-10 text-xs uppercase tracking-[0.35em] font-semibold">
+            <a href="./" class="hover:text-gold transition">Home</a>
             <div class="relative group/services">
                 <button class="flex items-center gap-1.5 uppercase hover:text-gold transition">
                     Services
@@ -30,105 +29,154 @@
                 </button>
                 <div class="absolute top-full left-0 pt-3 hidden group-hover/services:block z-50">
                     <div class="bg-[#1A0508] border border-white/10 min-w-[210px]">
-                        <a href="design-build.html" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition">Design &amp; Build</a>
-                        <a href="renovation.html" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition border-t border-white/5">Renovation</a>
-                        <a href="sustainable.html" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition border-t border-white/5">Sustainable Construction</a>
+                        <a href="design-build" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition">Design &amp; Build</a>
+                        <a href="renovation" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition border-t border-white/5">Renovation</a>
+                        <a href="sustainable" class="block px-6 py-3.5 text-gray-400 hover:text-gold hover:bg-[#2D0B12] transition border-t border-white/5">Sustainable Construction</a>
                     </div>
                 </div>
             </div>
-            <a href="portfolio.html" class="text-gold">Registry</a>
-            <a href="about.html" class="hover:text-gold transition">The Firm</a>
-            <a href="contact.html" class="bg-gold text-black px-6 py-2 ml-4 hover:bg-white transition duration-300">Inquiry</a>
+            <a href="portfolio" class="text-gold">Catalog</a>
+            <a href="about" class="hover:text-gold transition">The Firm</a>
+            <a href="contact" class="bg-gold text-black px-6 py-2 ml-4 hover:bg-white transition duration-300">Inquiry</a>
         </div>
     </nav>
 
-    <header class="pt-48 pb-12 bg-[#1A0508]">
-        <div class="max-w-7xl mx-auto px-10 flex flex-col md:flex-row justify-between items-end border-b border-white/10 pb-12">
-            <div>
-                <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">Selected Works 2018–2026</h4>
-                <h1 class="text-5xl md:text-6xl font-serif text-white">The Project Registry</h1>
-            </div>
-            <div class="flex space-x-8 mt-8 md:mt-0 text-[10px] uppercase tracking-[0.3em] font-bold">
-                <button onclick="filterProjects('all')" class="text-white hover:text-gold transition focus:text-gold">All</button>
-                <button onclick="filterProjects('commercial')" class="text-gray-500 hover:text-gold transition focus:text-gold">Commercial</button>
-                <button onclick="filterProjects('residential')" class="text-gray-500 hover:text-gold transition focus:text-gold">Residential</button>
-            </div>
+    <header class="pt-48 pb-16 bg-[#1A0508] border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-10">
+            <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">What We Can Deliver</h4>
+            <h1 class="text-5xl md:text-6xl font-serif text-white mb-8">Capabilities Catalog</h1>
+            <p class="max-w-3xl text-gray-400 text-lg leading-relaxed mb-6">
+                This page is a sample catalog of the project types Bryit Builders Corporation is built to handle. These are representative capabilities and target scopes, not claimed completed projects.
+            </p>
+            <p class="max-w-3xl text-gray-500 text-sm leading-relaxed">
+                We use this catalog to help clients understand fit, typical budget range, scope expectations, and the kinds of spaces that align with our mid-market design-build and renovation model in the Philippines.
+            </p>
         </div>
     </header>
 
-    <section class="py-12 bg-[#1A0508]">
-        <div class="max-w-7xl mx-auto px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section class="py-20 bg-[#220A0F]">
+        <div class="max-w-7xl mx-auto px-10 grid md:grid-cols-2 xl:grid-cols-3 gap-8">
 
-            <div class="project-card commercial col-span-1 lg:col-span-2 group relative h-[500px] overflow-hidden cursor-pointer">
-                <img src="assets/images/service-commercial.jmp.png" alt="The Skyline Tower" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 group-hover:grayscale-0 grayscale">
-                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-500"></div>
-                <div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black to-transparent">
-                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-2">Makati City | Commercial</span>
-                    <h3 class="text-3xl font-serif text-white">The Skyline Financial Tower</h3>
-                    <div class="max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-500">
-                        <p class="text-gray-400 text-sm mt-2">32-Story Steel & Glass Structure • LEED Gold Certified</p>
+            <article class="border border-white/5 bg-[#160508] overflow-hidden flex flex-col">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=80" alt="Cafe and restaurant interior" class="w-full h-72 object-cover">
+                <div class="p-8 flex flex-col flex-1">
+                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-3">Commercial Fit-Out</span>
+                    <h2 class="text-2xl font-serif text-white mb-4">Cafes & Restaurants</h2>
+                    <p class="text-gray-400 leading-loose text-sm mb-6">Interior build-outs and renovations for food and beverage spaces that need flow, brand presentation, kitchen coordination, and durable finishes.</p>
+                    <div class="space-y-3 text-sm text-gray-400 mb-8 flex-1">
+                        <p><span class="text-white">Typical Budget:</span> ₱500K - ₱3M</p>
+                        <p><span class="text-white">Typical Scope:</span> dining area, counter, kitchen-facing coordination, lighting, finishes, signage support</p>
+                        <p><span class="text-white">Best For:</span> new concepts, relaunches, and active businesses that need phased execution</p>
                     </div>
+                    <a href="contact" class="inline-block bg-gold text-black px-8 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white transition">Discuss This Type</a>
                 </div>
-            </div>
+            </article>
 
-            <div class="project-card residential group relative h-[500px] overflow-hidden cursor-pointer">
-                <img src="assets/images/service-residential.jmp.png" alt="Private Estate" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 group-hover:grayscale-0 grayscale">
-                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-500"></div>
-                <div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black to-transparent">
-                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-2">Alabang | Residential</span>
-                    <h3 class="text-2xl font-serif text-white">The Azure Estate</h3>
-                    <div class="max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-500">
-                        <p class="text-gray-400 text-sm mt-2">Custom Concrete Villa • 1,200 sqm</p>
+            <article class="border border-white/5 bg-[#160508] overflow-hidden flex flex-col">
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80" alt="Modern office interior" class="w-full h-72 object-cover">
+                <div class="p-8 flex flex-col flex-1">
+                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-3">Business Interiors</span>
+                    <h2 class="text-2xl font-serif text-white mb-4">Offices, Clinics & Retail</h2>
+                    <p class="text-gray-400 leading-loose text-sm mb-6">Practical fit-outs and renovations for workplaces and customer-facing spaces where layout, presentation, and operations need to work together.</p>
+                    <div class="space-y-3 text-sm text-gray-400 mb-8 flex-1">
+                        <p><span class="text-white">Typical Budget:</span> ₱800K - ₱2.5M</p>
+                        <p><span class="text-white">Typical Scope:</span> partitions, ceilings, lighting, front-of-house finishes, storage planning, MEP coordination</p>
+                        <p><span class="text-white">Best For:</span> tenant fit-outs, branch refreshes, and growing service businesses</p>
                     </div>
+                    <a href="contact" class="inline-block bg-gold text-black px-8 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white transition">Discuss This Type</a>
                 </div>
-            </div>
+            </article>
 
-            <div class="project-card residential group relative h-[500px] overflow-hidden cursor-pointer">
-                <img src="assets/images/casa-historia.jmp.png" alt="Heritage Restoration" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 group-hover:grayscale-0 grayscale">
-                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-500"></div>
-                <div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black to-transparent">
-                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-2">Vigan | Heritage & Luxury</span>
-                    <h3 class="text-2xl font-serif text-white">The Villa Ilocandia Restoration</h3>
-                    <div class="max-h-0 overflow-hidden group-hover:max-h-24 transition-all duration-500">
-                        <p class="text-gray-400 text-sm mt-2">18th Century Colonial Restoration • Luxury Interior Retrofit • Seismic Retrofitting</p>
+            <article class="border border-white/5 bg-[#160508] overflow-hidden flex flex-col">
+                <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Tropical family home exterior" class="w-full h-72 object-cover">
+                <div class="p-8 flex flex-col flex-1">
+                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-3">Residential Build</span>
+                    <h2 class="text-2xl font-serif text-white mb-4">Homes & Family Residences</h2>
+                    <p class="text-gray-400 leading-loose text-sm mb-6">Design-build and renovation work for homes that need clear planning, budget discipline, and dependable execution from concept to turnover.</p>
+                    <div class="space-y-3 text-sm text-gray-400 mb-8 flex-1">
+                        <p><span class="text-white">Typical Budget:</span> ₱1.5M - ₱5M</p>
+                        <p><span class="text-white">Typical Scope:</span> new homes, family compounds, extensions, kitchen upgrades, toilet and bath renovation</p>
+                        <p><span class="text-white">Best For:</span> families who want one accountable team and clearer coordination</p>
                     </div>
+                    <a href="contact" class="inline-block bg-gold text-black px-8 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white transition">Discuss This Type</a>
                 </div>
-            </div>
+            </article>
 
-            <div class="project-card commercial col-span-1 lg:col-span-2 group relative h-[500px] overflow-hidden cursor-pointer">
-                <img src="assets/images/hero-home.jmp.png" alt="Corporate HQ" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 group-hover:grayscale-0 grayscale">
-                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-500"></div>
-                <div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black to-transparent">
-                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-2">BGC | Commercial</span>
-                    <h3 class="text-3xl font-serif text-white">Nexus Tech Hub</h3>
-                    <div class="max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-500">
-                        <p class="text-gray-400 text-sm mt-2">Mixed-Use Development • 50,000 sqm GFA</p>
+            <article class="border border-white/5 bg-[#160508] overflow-hidden flex flex-col">
+                <img src="assets/images/commercial-construction-planning.jpg" alt="Occupied commercial site renovation planning" class="w-full h-72 object-cover">
+                <div class="p-8 flex flex-col flex-1">
+                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-3">Renovation Planning</span>
+                    <h2 class="text-2xl font-serif text-white mb-4">Occupied-Site Renovation</h2>
+                    <p class="text-gray-400 leading-loose text-sm mb-6">Upgrade work for businesses and residences that cannot afford disorder, delays, or unnecessary downtime during construction.</p>
+                    <div class="space-y-3 text-sm text-gray-400 mb-8 flex-1">
+                        <p><span class="text-white">Typical Budget:</span> ₱500K - ₱2M</p>
+                        <p><span class="text-white">Typical Scope:</span> phased demolition, rough works, MEP updates, finishes, handover and punchlisting</p>
+                        <p><span class="text-white">Best For:</span> active sites where flow, access, and schedule control matter</p>
                     </div>
+                    <a href="contact" class="inline-block bg-gold text-black px-8 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white transition">Discuss This Type</a>
                 </div>
-            </div>
+            </article>
+
+            <article class="border border-white/5 bg-[#160508] overflow-hidden flex flex-col">
+                <img src="https://images.pexels.com/photos/29206495/pexels-photo-29206495.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Solar-ready building" class="w-full h-72 object-cover">
+                <div class="p-8 flex flex-col flex-1">
+                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-3">Sustainable Upgrades</span>
+                    <h2 class="text-2xl font-serif text-white mb-4">Solar & Tropical Efficiency</h2>
+                    <p class="text-gray-400 leading-loose text-sm mb-6">Sustainable construction decisions shaped around Philippine heat, power costs, and long-term operating practicality.</p>
+                    <div class="space-y-3 text-sm text-gray-400 mb-8 flex-1">
+                        <p><span class="text-white">Typical Budget:</span> varies by scope and system size</p>
+                        <p><span class="text-white">Typical Scope:</span> solar planning, passive cooling, daylighting, plant-forward interiors, material selection</p>
+                        <p><span class="text-white">Best For:</span> clients who want lower operating costs and a more climate-aware build</p>
+                    </div>
+                    <a href="contact" class="inline-block bg-gold text-black px-8 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white transition">Discuss This Type</a>
+                </div>
+            </article>
+
+            <article class="border border-white/5 bg-[#160508] overflow-hidden flex flex-col">
+                <img src="https://images.summitmedia-digital.com/spotph/images/2022/07/13/2exterior-1657704182.jpg" alt="Philippine home restoration exterior" class="w-full h-72 object-cover">
+                <div class="p-8 flex flex-col flex-1">
+                    <span class="text-gold text-[10px] uppercase tracking-[0.3em] font-bold block mb-3">Older Structures</span>
+                    <h2 class="text-2xl font-serif text-white mb-4">Restoration & Sensitive Upgrades</h2>
+                    <p class="text-gray-400 leading-loose text-sm mb-6">Measured improvement work for older homes and properties that need utility renewal, finish updates, or structural review without losing their character.</p>
+                    <div class="space-y-3 text-sm text-gray-400 mb-8 flex-1">
+                        <p><span class="text-white">Typical Budget:</span> project-specific</p>
+                        <p><span class="text-white">Typical Scope:</span> restoration planning, repair sequencing, service upgrades, finish renewal</p>
+                        <p><span class="text-white">Best For:</span> families and owners who want to improve an existing property responsibly</p>
+                    </div>
+                    <a href="contact" class="inline-block bg-gold text-black px-8 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white transition">Discuss This Type</a>
+                </div>
+            </article>
 
         </div>
     </section>
 
-    <footer class="py-12 bg-[#0D0305] text-center border-t border-white/5 mt-12">
+    <section class="py-20 bg-[#1A0508] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-10 grid md:grid-cols-3 gap-8">
+            <div class="border border-white/5 p-8 bg-[#220A0F]/50">
+                <h3 class="text-white font-serif text-2xl mb-4">How To Read This Page</h3>
+                <p class="text-gray-400 leading-loose text-sm">These are sample capability profiles meant to show the kinds of projects Bryit is prepared to handle. They are not presented as completed company projects.</p>
+            </div>
+            <div class="border border-white/5 p-8 bg-[#220A0F]/50">
+                <h3 class="text-white font-serif text-2xl mb-4">Who It Is For</h3>
+                <p class="text-gray-400 leading-loose text-sm">The catalog is built for mid-market clients in the Philippines who want more structure, clearer communication, and better execution than the informal contractor route.</p>
+            </div>
+            <div class="border border-white/5 p-8 bg-[#220A0F]/50">
+                <h3 class="text-white font-serif text-2xl mb-4">What Happens Next</h3>
+                <p class="text-gray-400 leading-loose text-sm">If one of these capability types matches your project, the next step is an inquiry, a scope discussion, and a more specific recommendation based on budget, site, and timeline.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gold text-black text-center">
+        <h2 class="text-3xl font-serif font-bold mb-4 uppercase tracking-tighter">Need A Scope Like This?</h2>
+        <p class="text-black/60 mb-8 text-sm max-w-xl mx-auto">Tell us what you are planning, and we can help determine whether the project fits our design-build, renovation, or sustainable delivery model.</p>
+        <a href="contact" class="border-2 border-black px-12 py-4 font-bold uppercase text-xs tracking-[0.3em] hover:bg-black hover:text-white transition">Start An Inquiry</a>
+    </section>
+
+    <footer class="py-12 bg-[#0D0305] text-center border-t border-white/5">
         <h3 class="text-white font-serif mb-4">Bryit Builders Corp.</h3>
         <p class="text-[10px] uppercase tracking-[0.5em] text-gray-600">&copy; 2026. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        function filterProjects(category) {
-            const projects = document.querySelectorAll('.project-card');
-            projects.forEach(project => {
-                if (category === 'all') {
-                    project.style.display = 'block';
-                } else if (project.classList.contains(category)) {
-                    project.style.display = 'block';
-                } else {
-                    project.style.display = 'none';
-                }
-            });
-        }
-    </script>
 
 </body>
 </html>
