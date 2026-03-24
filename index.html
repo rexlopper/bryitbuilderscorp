@@ -18,10 +18,13 @@
 </head>
 <body class="text-slate-300 antialiased">
 
-    <nav class="fixed w-full z-50 py-8 px-10 flex justify-between items-center bg-[#1A0508]/80 backdrop-blur-lg border-b border-white/5">
-        <a href="./" class="block w-[250px] md:w-[280px]">
+    <nav class="fixed w-full z-50 px-4 py-4 sm:px-6 md:px-10 md:py-8 flex justify-between items-center bg-[#1A0508]/80 backdrop-blur-lg border-b border-white/5">
+        <a href="./" class="block w-[180px] sm:w-[210px] md:w-[280px]">
             <img src="assets/images/bryit-builders-logo.svg" alt="Bryit Builders Corporation" class="w-full h-auto max-h-[118px] object-contain">
         </a>
+        <button type="button" class="md:hidden inline-flex items-center justify-center w-11 h-11 border border-white/10 text-white" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
         <div class="hidden md:flex items-center space-x-10 text-xs uppercase tracking-[0.35em] font-semibold">
             <a href="./" class="text-gold">Home</a>
             <div class="relative group/services">
@@ -42,54 +45,66 @@
             <a href="contact" class="bg-gold text-black px-6 py-2 ml-4 hover:bg-white transition duration-300">Inquiry</a>
         </div>
     </nav>
+    <div id="mobile-nav" class="fixed top-[88px] inset-x-4 z-40 hidden md:hidden border border-white/10 bg-[#1A0508]/95 backdrop-blur-xl shadow-2xl">
+        <div class="p-4 space-y-1 text-[11px] uppercase tracking-[0.28em] font-semibold">
+            <a href="./" class="block px-3 py-3 text-gold">Home</a>
+            <a href="services" class="block px-3 pt-3 pb-2 text-gold/80">Services</a>
+            <a href="design-build" class="block px-3 py-3 text-gray-300">Design &amp; Build</a>
+            <a href="renovation" class="block px-3 py-3 text-gray-300">Renovation</a>
+            <a href="sustainable" class="block px-3 py-3 text-gray-300">Sustainable Construction</a>
+            <a href="portfolio" class="block px-3 py-3 text-gray-300">Catalog</a>
+            <a href="about" class="block px-3 py-3 text-gray-300">The Firm</a>
+            <a href="contact" class="block px-3 py-3 bg-gold text-black text-center mt-2">Inquiry</a>
+        </div>
+    </div>
 
-    <header class="relative h-screen flex items-center overflow-hidden">
+    <header class="relative min-h-[92svh] md:h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="assets/images/service-commercial.jmp.png" alt="Commercial construction project in the Philippines" class="w-full h-full object-cover scale-105 animate-[pulse_10s_infinite]">
             <div class="absolute inset-0 bg-gradient-to-r from-[#120306] via-[#1A0508]/82 to-[#1A0508]/18"></div>
         </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-10 w-full">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 w-full pt-12 md:pt-0">
             <div class="max-w-3xl">
-                <h1 class="text-6xl md:text-8xl font-serif text-white leading-tight mb-8">
+                <h1 class="text-4xl sm:text-5xl md:text-8xl font-serif text-white leading-tight mb-6 md:mb-8">
                     Design. <br> Build. <br>Deliver.
                 </h1>
-                <p class="text-lg md:text-xl text-gray-300 font-light mb-10 leading-relaxed max-w-xl">
+                <p class="text-base sm:text-lg md:text-xl text-gray-300 font-light mb-8 md:mb-10 leading-relaxed max-w-xl">
                     Bryit Builders Corporation is defined by design clarity, careful craftsmanship, and responsible execution.
                 </p>
-                <div class="flex items-center space-x-6">
-                    <a href="portfolio" class="bg-gold text-black px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-white transition shadow-2xl">View Catalog</a>
-                    <a href="services" class="text-white border-b border-white/30 pb-2 hover:border-gold transition uppercase text-[10px] tracking-widest font-bold">Learn More</a>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+                    <a href="portfolio" class="bg-gold text-black px-8 py-4 md:px-10 md:py-5 font-bold uppercase text-[10px] md:text-xs tracking-widest hover:bg-white transition shadow-2xl text-center">View Catalog</a>
+                    <a href="services" class="text-white border-b border-white/30 pb-2 hover:border-gold transition uppercase text-[10px] tracking-widest font-bold w-fit">Learn More</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="py-32 bg-[#220A0F] border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-10 grid md:grid-cols-2 gap-20 items-center">
+    <section class="py-20 md:py-32 bg-[#220A0F] border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 grid md:grid-cols-2 gap-10 md:gap-20 items-center">
             <div>
-                <h2 class="text-4xl font-serif text-white mb-8">Structured delivery for <br>real-world projects.</h2>
-                <div class="w-20 h-1 bg-gold mb-8"></div>
+                <h2 class="text-3xl md:text-4xl font-serif text-white mb-6 md:mb-8">Structured delivery for <br>real-world projects.</h2>
+                <div class="w-20 h-1 bg-gold mb-6 md:mb-8"></div>
                 <p class="text-gray-400 leading-loose mb-6">
                     Bryit Builders Corporation is built for clients who want a contractor that feels professional, design-conscious, and accountable without stepping into big-firm overhead. We focus on clear scope, practical budgeting, and careful execution for commercial and residential projects in the Philippine mid-market.
                 </p>
                 <a href="about" class="text-gold font-bold uppercase text-xs tracking-widest italic hover:underline">Read our story &rarr;</a>
             </div>
-            <div class="grid grid-cols-2 gap-10">
-                <div class="p-8 border border-white/5 bg-[#2D0B12]/40">
-                    <span class="text-5xl font-serif text-white block mb-2">100%</span>
+            <div class="grid grid-cols-2 gap-4 md:gap-10">
+                <div class="p-5 md:p-8 border border-white/5 bg-[#2D0B12]/40">
+                    <span class="text-4xl md:text-5xl font-serif text-white block mb-2">100%</span>
                     <span class="text-[10px] uppercase tracking-widest text-gold font-bold">Design-Led Delivery</span>
                 </div>
-                <div class="p-8 border border-white/5 bg-[#2D0B12]/40">
-                    <span class="text-5xl font-serif text-white block mb-2">1</span>
+                <div class="p-5 md:p-8 border border-white/5 bg-[#2D0B12]/40">
+                    <span class="text-4xl md:text-5xl font-serif text-white block mb-2">1</span>
                     <span class="text-[10px] uppercase tracking-widest text-gold font-bold">Point of Accountability</span>
                 </div>
-                <div class="p-8 border border-white/5 bg-[#2D0B12]/40">
-                    <span class="text-5xl font-serif text-white block mb-2">0</span>
+                <div class="p-5 md:p-8 border border-white/5 bg-[#2D0B12]/40">
+                    <span class="text-4xl md:text-5xl font-serif text-white block mb-2">0</span>
                     <span class="text-[10px] uppercase tracking-widest text-gold font-bold">Recorded Incidents</span>
                 </div>
-                <div class="p-8 border border-white/5 bg-[#2D0B12]/40">
-                    <span class="text-5xl font-serif text-white block mb-2">3</span>
+                <div class="p-5 md:p-8 border border-white/5 bg-[#2D0B12]/40">
+                    <span class="text-4xl md:text-5xl font-serif text-white block mb-2">3</span>
                     <span class="text-[10px] uppercase tracking-widest text-gold font-bold">Core Service Lines</span>
                 </div>
             </div>
@@ -99,6 +114,19 @@
     <footer class="py-20 bg-[#0D0305] text-center border-t border-white/5">
         <p class="text-[10px] uppercase tracking-[0.5em] text-gray-600">&copy; 2026 Bryit Builders Corp.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.querySelector('[data-mobile-nav-toggle]');
+            const menu = document.getElementById('mobile-nav');
+            if (!toggle || !menu) return;
+            toggle.addEventListener('click', function () {
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!expanded));
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
 
 </body>
 </html>

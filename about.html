@@ -17,10 +17,13 @@
 </head>
 <body class="text-slate-300 antialiased">
 
-    <nav class="fixed w-full z-50 py-8 px-10 flex justify-between items-center bg-[#1A0508]/95 backdrop-blur-lg border-b border-white/5">
-        <a href="./" class="block w-[250px] md:w-[280px]">
+    <nav class="fixed w-full z-50 px-4 py-4 sm:px-6 md:px-10 md:py-8 flex justify-between items-center bg-[#1A0508]/95 backdrop-blur-lg border-b border-white/5">
+        <a href="./" class="block w-[180px] sm:w-[210px] md:w-[280px]">
             <img src="assets/images/bryit-builders-logo.svg" alt="Bryit Builders Corporation" class="w-full h-auto max-h-[118px] object-contain">
         </a>
+        <button type="button" class="md:hidden inline-flex items-center justify-center w-11 h-11 border border-white/10 text-white" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
         <div class="hidden md:flex items-center space-x-10 text-xs uppercase tracking-[0.35em] font-semibold">
             <a href="./" class="hover:text-gold transition">Home</a>
             <div class="relative group/services">
@@ -41,27 +44,39 @@
             <a href="contact" class="bg-gold text-black px-6 py-2 ml-4 hover:bg-white transition duration-300">Inquiry</a>
         </div>
     </nav>
+    <div id="mobile-nav" class="fixed top-[88px] inset-x-4 z-40 hidden md:hidden border border-white/10 bg-[#1A0508]/95 backdrop-blur-xl shadow-2xl">
+        <div class="p-4 space-y-1 text-[11px] uppercase tracking-[0.28em] font-semibold">
+            <a href="./" class="block px-3 py-3 text-gray-300">Home</a>
+            <a href="services" class="block px-3 pt-3 pb-2 text-gold/80">Services</a>
+            <a href="design-build" class="block px-3 py-3 text-gray-300">Design &amp; Build</a>
+            <a href="renovation" class="block px-3 py-3 text-gray-300">Renovation</a>
+            <a href="sustainable" class="block px-3 py-3 text-gray-300">Sustainable Construction</a>
+            <a href="portfolio" class="block px-3 py-3 text-gray-300">Catalog</a>
+            <a href="about" class="block px-3 py-3 text-gold">The Firm</a>
+            <a href="contact" class="block px-3 py-3 bg-gold text-black text-center mt-2">Inquiry</a>
+        </div>
+    </div>
 
     <!-- Header for About Page -->
-    <header class="relative h-[50vh] flex items-center overflow-hidden">
+    <header class="relative h-[42vh] md:h-[50vh] flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0">
              <div class="absolute inset-0 bg-[#1A0508]"></div>
              <img src="assets/images/the_firm.jpg" alt="Bryit Builders Corporation family leadership" class="w-full h-full object-cover opacity-30">
         </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-10 w-full mt-20">
-            <h1 class="text-5xl md:text-7xl font-serif text-white leading-tight">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 w-full mt-20">
+            <h1 class="text-4xl md:text-7xl font-serif text-white leading-tight">
                 The <span class="text-gold">Firm</span>
             </h1>
         </div>
     </header>
 
-    <section class="py-20 bg-[#1A0508] border-y border-white/5">
-        <div class="max-w-[1500px] mx-auto px-10">
-            <div class="grid xl:grid-cols-[0.78fr_1.22fr] gap-14 items-start">
+    <section class="py-16 md:py-20 bg-[#1A0508] border-y border-white/5">
+        <div class="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-10">
+            <div class="grid xl:grid-cols-[0.78fr_1.22fr] gap-10 md:gap-14 items-start">
                 <div>
                     <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">What We Bring</h4>
-                    <h2 class="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">Family-Led Expertise<br>Built for Construction.</h2>
+                    <h2 class="text-3xl md:text-5xl font-serif text-white mb-6 leading-tight">Family-Led Expertise<br>Built for Construction.</h2>
                     <div class="w-20 h-px bg-gold mb-8"></div>
                     <p class="text-gray-400 leading-loose text-base mb-5">
                         Bryit Builders Corporation is built around complementary strengths inside one family leadership group: engineering, data and analytics, team leadership, structural and civil execution, architecture and design direction, and occupational health discipline.
@@ -70,23 +85,23 @@
                         That mix matters in construction. It means design decisions, engineering judgment, operational discipline, and site responsibility are not treated as separate conversations, but as one coordinated way of building.
                     </p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-5">
-                    <div class="border border-white/5 bg-[#220A0F]/55 p-7">
+                <div class="grid md:grid-cols-2 gap-4 md:gap-5">
+                    <div class="border border-white/5 bg-[#220A0F]/55 p-6 md:p-7">
                         <span class="text-gold text-[10px] uppercase tracking-[0.35em] font-bold block mb-5">Engineering & Strategy</span>
                         <h3 class="text-white font-serif text-3xl mb-4">Rex</h3>
                         <p class="text-gray-400 text-sm leading-loose">Rex brings technical depth and business strategy to Bryit Builders Corporation. He holds two master's degrees: a Master of Science in Electrical Engineering from UP Diliman and a Masters of Business in Innovation from the Asian Institute of Management. Combined with his background in data management and analytics, his profile strengthens the firm's ability to connect engineering rigor with modern decision-making.</p>
                     </div>
-                    <div class="border border-white/5 bg-[#220A0F]/55 p-7">
+                    <div class="border border-white/5 bg-[#220A0F]/55 p-6 md:p-7">
                         <span class="text-gold text-[10px] uppercase tracking-[0.35em] font-bold block mb-5">Construction Delivery</span>
                         <h3 class="text-white font-serif text-3xl mb-4">Arcelo</h3>
                         <p class="text-gray-400 text-sm leading-loose">Arcelo brings more than 30 years of construction experience shaped by structural and civil engineering expertise, field execution, and practical judgment. His strength lies in translating plans into buildable realities and keeping projects grounded in durability, discipline, and sound construction practice.</p>
                     </div>
-                    <div class="border border-white/5 bg-[#220A0F]/55 p-7">
+                    <div class="border border-white/5 bg-[#220A0F]/55 p-6 md:p-7">
                         <span class="text-gold text-[10px] uppercase tracking-[0.35em] font-bold block mb-5">Architecture & Design</span>
                         <h3 class="text-white font-serif text-3xl mb-4">Bryshia</h3>
                         <p class="text-gray-400 text-sm leading-loose">Bryshia is an architect from the University of Santo Tomas with a design-forward perspective. She helps shape spaces that are not only buildable, but also visually coherent, client-facing, and memorable, strengthening the firm's architectural language across residential and commercial work.</p>
                     </div>
-                    <div class="border border-white/5 bg-[#220A0F]/55 p-7">
+                    <div class="border border-white/5 bg-[#220A0F]/55 p-6 md:p-7">
                         <span class="text-gold text-[10px] uppercase tracking-[0.35em] font-bold block mb-5">Health & Site Discipline</span>
                         <h3 class="text-white font-serif text-3xl mb-4">Brythel</h3>
                         <p class="text-gray-400 text-sm leading-loose">Brythel brings medical training from the University of Santo Tomas into a field where occupational health and site responsibility matter deeply. Her perspective reinforces worker welfare, health awareness, and a culture of discipline in construction environments.</p>
@@ -97,7 +112,7 @@
     </section>
 
     <section class="py-24 bg-[#220A0F]">
-        <div class="max-w-7xl mx-auto px-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
             <div class="mb-16">
                 <h4 class="text-gold uppercase tracking-[0.6em] text-xs font-bold mb-4">The Executive Board</h4>
                 <h2 class="text-4xl font-serif text-white mb-6 uppercase tracking-widest">Leadership & Legacy</h2>
@@ -261,6 +276,19 @@
     <footer class="py-20 bg-[#0D0305] text-center border-t border-white/5">
         <p class="text-[10px] uppercase tracking-[0.5em] text-gray-600">&copy; 2026 Bryit Builders Corp. Private & Confidential.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.querySelector('[data-mobile-nav-toggle]');
+            const menu = document.getElementById('mobile-nav');
+            if (!toggle || !menu) return;
+            toggle.addEventListener('click', function () {
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!expanded));
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
 
 </body>
 </html>
